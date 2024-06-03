@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 h1,h2{
+            text-align: center;
+        }
+       .box1 h1{
+            font-size: 4vw;
+            font-weight: 600;
+        }
+        .box1 h2{
+            font-size: 1.5vw;
+            font-weight: 500;
+            line-height: 40px;
+        }
+        .box1 img{
+            transform: translate(115%,0%);
+        }
+        @media (max-width:500px){
+            .box1 h1{
+             font-size: 5vh;
+           }
+           .box1 h2{
+             font-size: 2vh;
+             line-height: 20px;
+             text-align: justify;
+             padding: 10px;
+           }
+        .box1 img{
+            transform: translate(0%,0%);
+           width: 100%;
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="/CSS/HomeStyle.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo1.png" alt="logo" height="90%">
+            <h1>I'M SAFE</h1>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blogs</a></li>
+            <li><a href="/emergency">Emergency</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="box1">
+    <h1 id="label">About Us</h1>
+    <h2>
+        “I’m Safe” is a new app developed as a solution for women who want to stay safe when alone at night or even during the day.
+        When activated, the app sends out information about your location to your trusted circle while capturing vital information in the background.
+        “I’m safe” can be used anywhere in the world: at home, school, work, and any outdoor activities.
+    </h2>
+    <img id="img" src="img1.jpg" alt="image" height="30%" width="30%">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+    let item1 = document.querySelector("#img");
+    let item2 = document.querySelector("#label");
+    gsap.from(item2,{
+        // x: "-35%",
+        opacity: 0,
+        duration: 4
+    })
+    gsap.from(item1,{
+        y: "40%",
+        duration: 2,
+        opacity: 0
+    })
+   </script>
+</body>
+</html>

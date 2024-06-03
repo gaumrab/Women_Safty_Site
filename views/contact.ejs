@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/HomeStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        #box1 {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            border-left: 1px solid gray;
+            z-index: 7;
+        }
+
+        #box2 {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo1.png" alt="logo" height="90%">
+            <h1>I'M SAFE</h1>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blogs</a></li>
+            <li><a href="/emergency">Emergency</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img id="img" style="padding: 13px;" src="gif_1.gif" alt="image" height="95%" width="100%">
+        </div>
+        <div class="col-md-6" id="box1">
+            <h1>Contact Us</h1>
+            <div id="box2">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="user@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Talk to us</label>
+                    <textarea class="form-control" placeholder="Enter The Information Here." id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <button class="btn btn-primary" style="width: 100px;" type="submit">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        let item1 = document.querySelector("#img");
+        let item2 = document.querySelector("#box1");
+
+        let t1 = gsap.timeline();
+
+        t1.from(item2,{
+            x: "-5%",
+            duration: 1,
+            opacity: 0
+        });
+
+        t1.from(item1,{
+            x: "10%",
+            duration: 1,
+            opacity: 0
+        });
+    </script>
+</body>
+
+</html>
